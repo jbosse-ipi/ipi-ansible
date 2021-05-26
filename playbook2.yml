@@ -1,0 +1,4 @@
+- hosts: remote
+  tasks:
+  - name: test ping
+    ping:
