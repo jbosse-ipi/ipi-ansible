@@ -2,7 +2,8 @@
   tasks:
   - name: test ping
     ping:
-gather_facts: false
+  gather_facts: false
+  become: true
 vars_promts:
   - name: "Packages_name"
     prompt: " Quel est le paquet a installer ?"
