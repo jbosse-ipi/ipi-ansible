@@ -2,3 +2,15 @@
   tasks:
   - name: test ping
     ping:
+gather_facts: false
+vars_promts:
+  - name: "Packages_name"
+    prompt: " Quel est le paquet a installer ?"
+  - name: "Version"
+    prompt: "Quel est la version a installer ?"
+    default: "latest"
+tasks:
+  - name: install packages
+    apt:
+      name: "{{ Packages name }}"
+      state: "{{ Version }}"
